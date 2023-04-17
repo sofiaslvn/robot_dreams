@@ -1,0 +1,2 @@
+my_func called at 2023-04-17 17:21:31.929946
+my_second_func called at 2023-04-17 17:21:31.931014

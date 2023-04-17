@@ -1,0 +1,4 @@
+Error occurred at 2023-04-17 17:38:35.909652
+Error message: Custom exception is occurred
+Error occurred at 2023-04-17 17:39:12.911152
+Error message: Custom exception is occurred

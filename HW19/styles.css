@@ -1,0 +1,49 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+    ul {
+        font-size: 14px;
+    }
+    table {
+        font-size: 12px;
+    }
+}

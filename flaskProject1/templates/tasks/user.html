@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User {{ user_id }}</title>
+</head>
+<body>
+    <h1>User {{ user_id }}</h1>
+    {% if user_id % 2 == 0 %}
+        <p>Text with id: {{ user_id }}</p>
+    {% else %}
+        <p>Not Found</p>
+    {% endif %}
+</body>
+</html>

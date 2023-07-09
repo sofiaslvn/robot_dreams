@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect, session, abort
 from logging.config import dictConfig
 
 dictConfig({
@@ -18,8 +18,11 @@ dictConfig({
 })
 
 app = Flask(__name__)
+app.secret_key = 'your-secret-key'
+
 
 from views import *
+
 
 if __name__ == '__main__':
     app.run(debug=True)

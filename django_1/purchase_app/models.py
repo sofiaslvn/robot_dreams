@@ -7,5 +7,8 @@ class Purchase(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     quantity = models.IntegerField()
 
+    def __str__(self):
+        return f"ID: {self.id}; User: {self.user_id}; Book: {self.book_id}; Quantity  {self.quantity}"
+
     class Meta:
         db_table = 'purchase'

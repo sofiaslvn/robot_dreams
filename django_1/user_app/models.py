@@ -8,6 +8,8 @@ class User(AbstractUser):
 
     class Meta:
         db_table = 'user'
+        verbose_name = 'My super user'
+        verbose_name_plural = 'My super users'
 
 
 class Passport(models.Model):
@@ -15,6 +17,9 @@ class Passport(models.Model):
     issued = models.DateField(null=False)
     expires = models.DateField(null=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'passport {self.id} number:{self.number}'
 
     class Meta:
         db_table = 'passport'

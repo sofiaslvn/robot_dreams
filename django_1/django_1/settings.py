@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user.apps.TasksConfig',
     'user_app.apps.UserAppConfig',
     'book_app.apps.BookAppConfig',
     'purchase_app.apps.PurchaseAppConfig',
@@ -58,7 +57,7 @@ ROOT_URLCONF = 'django_1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR / 'user_app/templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {

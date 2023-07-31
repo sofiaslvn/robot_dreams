@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'user_app.apps.UserAppConfig',
     'book_app.apps.BookAppConfig',
     'purchase_app.apps.PurchaseAppConfig',
@@ -131,4 +132,20 @@ AUTH_USER_MODEL = 'user_app.User'
 
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
-}
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # TODO - uncomment after auth implementation
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ],
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#     'PAGE_SIZE': 5,
+#     'DEFAULT_THROTTLE_CLASSES': [
+#         'rest_framework.throttling.AnonRateThrottle',
+#         'rest_framework.throttling.UserRateThrottle',
+#     ],
+#     'DEFAULT_THROTTLE_RATES': {
+#         'anon': '100/day',  # 100 requests per day for unauthenticated users
+#         'user': '1000/day',  # 1000 requests per day for authenticated users
+#     },
+ }

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_filters',
+    'django_celery_beat',
     'user_app.apps.UserAppConfig',
     'book_app.apps.BookAppConfig',
     'purchase_app.apps.PurchaseAppConfig',
@@ -149,3 +150,14 @@ REST_FRAMEWORK = {
 #         'user': '1000/day',  # 1000 requests per day for authenticated users
 #     },
  }
+
+# Celery settings
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+
+CELERY_BEAT_SCHEDULE = {
+    'print_text_hello_world_every_60_seconds': {  # A unique name for this task
+        'task': 'user_app.tasks.print_text_hello_world',  # Import path for the task
+        'schedule': 60.0,  # Run every 60 seconds
+    },
+}
